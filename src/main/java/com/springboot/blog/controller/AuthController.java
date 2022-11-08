@@ -68,7 +68,6 @@ public class AuthController {
             return new ResponseEntity<>("Email is already taken!", HttpStatus.BAD_REQUEST);
         }
 
-
         User user = new User();
         user.setName(signUpDto.getName());
         user.setUsername(signUpDto.getUsername());
@@ -81,6 +80,5 @@ public class AuthController {
         userRepository.save(user);
 
         return new ResponseEntity<>("User registered successfully", HttpStatus.OK);
-
     }
 }
